@@ -163,6 +163,11 @@ button {
     color: var(--color-surface);
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 
 /* ==========================
    9. SEARCH
