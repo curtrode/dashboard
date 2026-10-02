@@ -48,7 +48,7 @@ function displayRandomQuote() {
         </div>`;
 }
 
-function displayQuoteError() {
+function displayQuotesError() {
     document.getElementById('quotes-display').innerHTML =
         `<p class="widget-error">Quotes data is unavailable right now.</p>`;
 }
@@ -68,14 +68,12 @@ function loadQuotes() {
         })
         .catch(error => {
             console.error('Error loading quote:', error);
-            displayQuoteError();
+            displayQuotesError();
         });
 }
 
 
-loadQuotes();
-
 quoteButton.addEventListener('click', displayRandomQuote);
 
-
 loadWeather();
+loadQuotes();
